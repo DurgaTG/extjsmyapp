@@ -34,7 +34,42 @@ Ext.define('MyappDay2.view.main.center.CenterView', {
 		xtype:'button',
 		text:'Add',
 		handler: function(){
-			Ext.Msg.alert('Message added');
+			//DELETE
+			//Ext.Ajax.request({
+			//	url: 'http://localhost:3000/posts/3',
+			//	method:'DELETE',
+			//	success:function(response){
+			//		Ext.Msg.alert('I am in success');
+			//		Ext.Msg.alert(response);
+			//			},
+			//			failure:function(response){
+			//				Ext.Msg.alert('I am in failure');
+			//				Ext.Msg.alert(response);
+			//					}
+			//});
+			//POST
+			//Ext.Ajax.request({
+			//	url: 'http://localhost:3000/posts',
+			//	method:'POST',
+			//	jsonData: {
+			//		name: 'TestName'
+			//	},
+			//	success: function(response){
+			//		Ext.Msg.alert(response);
+			//	},
+			//	failure: function(){
+			//		Ext.Msg.alert(response);
+			//	}
+			//});
+			
+			//Ext.Ajax.request({
+			//	url: 'http://localhost:3000/posts',
+			//	success:function(response){
+			//	const responseBody = Ext.decode(response.responseText)
+			//	console.log(responseBody);
+			//	}
+			//})
+//			Ext.Msg.alert('Message added');
 		}
 	}
 ]
