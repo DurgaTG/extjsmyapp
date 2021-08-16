@@ -5,9 +5,12 @@ Ext.define('MyappDay2.view.main.center.CenterView', {
 	layout: 'card',
 	items:[{
 		xtype: 'panel',
+		viewModel:{
+			type:'testModel'
+		},
 		fullscreen:true,
 	//	layout:'vbox',
-		defaultType: 'textfield',
+		defaultType: 'textfield',	
 		defaults:{
 			flex:1
 		},
@@ -17,7 +20,8 @@ Ext.define('MyappDay2.view.main.center.CenterView', {
 	},
 	{
 		fieldLabel:'First Name',
-		name:'firstname'
+		name:'firstname',
+		bind: '{firstname}'
 	},
 	{
 		fieldLabel:'Last Name',
