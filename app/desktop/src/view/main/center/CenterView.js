@@ -38,19 +38,21 @@ Ext.define('MyappDay2.view.main.center.CenterView', {
 		xtype:'button',
 		text:'Add',
 		handler: function(){
-			//DELETE
-			//Ext.Ajax.request({
-			//	url: 'http://localhost:3000/posts/3',
-			//	method:'DELETE',
-			//	success:function(response){
-			//		Ext.Msg.alert('I am in success');
-			//		Ext.Msg.alert(response);
-			//			},
-			//			failure:function(response){
-			//				Ext.Msg.alert('I am in failure');
-			//				Ext.Msg.alert(response);
-			//					}
-			//});
+			Ext.Ajax.on("beforerequest",function(){
+				Ext.Msg.alert('b4 event called');
+			});
+			Ext.Ajax.request({
+				url: 'http://localhost:3000/posts/3',
+				method:'DELETE',
+				success:function(response){
+					Ext.Msg.alert('I am in success');
+					Ext.Msg.alert(response);
+						},
+						failure:function(response){
+						Ext.Msg.alert('I am in failure');
+							Ext.Msg.alert(response);
+								}
+			});
 			//POST
 			//Ext.Ajax.request({
 			//	url: 'http://localhost:3000/posts',
